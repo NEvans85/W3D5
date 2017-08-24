@@ -70,10 +70,6 @@ h2 + .user_review {
     border-top: 1px solid black;
 }
 
-nav {
-
-}
-
 nav ul {
   display: flex;
 }
@@ -94,6 +90,46 @@ aside {
 
 .ingredients-list li {
     margin: 15px 0px;
+}
+
+.hamburger-dropdown{
+      display: none;
+}
+
+@media all and (max-width: 900px) {
+
+  nav ul {
+    display: none
+  }
+  .hamburger-dropdown {
+    display: block;
+  }
+
+  .hamburger-dropdown > li {
+      background-image: url(../assets/hamburger_icon.svg);
+      width: 50px;
+      height: 50px;
+      background-size: 50px 50px;
+      position: relative;
+  }
+
+  .hamburger-dropdown ul {
+      position: absolute ;
+  }
+
+  .hamburger-dropdown li ul li {
+    color: white;
+  }
+
+  .hamburger-dropdown li ul li a:hover {
+    text-decoration: bold, underline;
+  }
+
+  .hamburger-dropdown:hover ul {
+      display: block;
+      background-color: red;
+   }
+
 }
 
 input[type="text"], select {
